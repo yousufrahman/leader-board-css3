@@ -13,17 +13,23 @@ main{
 .container{
     background-color: #FFFFFF;
     width: 870px;
+    padding: 30px;
 }
 /* top players style */
+.top-players{
+    margin-bottom: 30px;
+}
 .section-title{
     color: #562EFF;
     font-size: 24px;
-    padding: 30px;
+    margin-top: 3px;
+   
 }
 .players{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-row-gap: 30px;
 
 }
 .player{
@@ -36,4 +42,5 @@ main{
 }
 .player-name{
     margin-left: 16px;
+    font-size: 18px;
 }
