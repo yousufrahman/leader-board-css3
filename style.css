@@ -8,12 +8,19 @@ body{
 }
 main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .container{
     background-color: #FFFFFF;
     width: 870px;
     padding: 30px;
+    border-radius: 5px;
+    margin-top: 21px;
+}
+hr{
+    border: 1px solid #D1D1D1;
+    margin-bottom: 27px;
 }
 /* top players style */
 .top-players{
@@ -44,3 +51,92 @@ main{
     margin-left: 16px;
     font-size: 18px;
 }
+/*-----------------
+ top blog styles
+ ------------------ */
+ .blogs{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-row-gap: 26px;
+ }
+ .blog{
+     display: flex;
+ }
+ .blog .thumbnail img{
+     width: 177px;
+     height: 177px;
+ }
+ .blog-info{
+     margin-left: 16px;
+ }
+ .blog-title{
+     font-size: 20px;
+ }
+ .blog-autho{
+     color: #9F9F9F;
+     font-size: 16px;
+ }
+ .blog-autho{
+     text-decoration: none;
+     font-size: 16px;
+     color: #562EFF;
+ }
+ /*-----------------
+  courses styles
+  ------------------- */
+  .courses{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 24px;
+  }
+  .course-info{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .course .course-banner img{
+      width: 224px;
+      height: 104px;
+  }
+  .fa-star{
+      font-size: 12px;
+  }
+  .fa-star.filled{
+      color: #FFC014;
+  }
+  .fa-star.empty{
+      color: #AEAEAE;
+  }
+  .course-duration{
+      background-color:#FFC014;
+      border-radius: 100%;
+  }
+  /* --------------
+  Media Queries
+  ----------------- */
+  
+  /* ----------------
+  Mobile Devices
+  ------------------- */
+  @media only screen and (max-width:688px){
+      .container{
+          width: 100%;
+      }
+      .players, .blogs, .courses{
+           grid-template-columns: repeat(1, 1fr);
+      }
+      .player, .blog{
+          flex-direction: column;
+      }
+    
+      }
+  }
+  /* ----------------
+  tablet devices
+  ------------------ */
+  @media only screen and (min-width: 688px) and (max-width: 992px) {
+      .players{
+          grid-template-columns: repeat(2, 1fr)
+      }
+      
+  }
